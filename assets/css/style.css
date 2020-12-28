@@ -428,6 +428,63 @@ nav { flex-basis: 100%; }
     transition: .4s;
   }
   /* display styling ends here */
+  /* mailing styling starts here */
+  .mailing {
+    padding: 47px 0 40px;
+    background-color: var(--ternary-color);
+  }
+
+  .mailing .wrapper,
+  .mailing-form {
+    display: flex;
+    align-items: center;
+  }
+
+  .mailing .wrapper { justify-content: space-between; }
+
+  .mailing-heading {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .3px;
+    text-transform: lowercase;
+  }
+
+  .input-box { position: relative; }
+
+  #email-us {
+    width: 576px;
+    padding: 15px 10px;
+    margin-right: 14px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .error {
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    color: red;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .5px;
+  }
+
+  .submit-btn {
+    font-weight: 900;
+    font-size: 16px;
+    padding: 17px 45px;
+    border: none;
+    border-radius: 16px;
+    transition: .4s;
+  }
+
+  .submit-btn:hover {
+    background-color: var(--font-color);
+    color: var(--secondary-btn-color);
+    box-shadow: 1px 1px 5px var(--btn-color);
+  }
+  /* mailing styling ends here */
 /*=================================
   main styling ends here
 =================================*/
