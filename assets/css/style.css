@@ -125,6 +125,11 @@ li {
 /* Common Classes */
 .upper-case { text-transform: uppercase; }
 
+.btn {
+  background-color: var(--secondary-btn-color);
+  color: var(--font-color);
+}
+
 /*=================================
   Header styling starts here
 =================================*/
@@ -351,6 +356,78 @@ nav { flex-basis: 100%; }
     font-weight: 800;
   }
   /* iterate styling ends here */
+
+  /* display styling starts here */
+
+  .display { padding: 20px 0 64px; }
+
+  .display-card {
+    margin: 38px 0 43px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .display-card li {
+    margin-bottom: 17px;
+    border-radius: 10px;
+    flex-basis: 31.7%;
+    overflow: hidden;
+  }
+
+
+  .display-card figure { margin-bottom: -4px;}
+  .display-card img { object-fit: cover; }
+
+  .display-content {
+    padding: 33px 28px 32px 30px;
+    background-color: var(--primary-color);
+  }
+
+  .display-heading {
+    color: #fff;
+    font-size: 23px;
+    font-weight: 900;
+  }
+
+  .display-para {
+    width: 93%;
+    margin: 18px 0 15px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 27px;
+  }
+
+  .learn-more {
+    padding: 22.5px;
+    border-radius: 10px;
+    display: block;
+    font-size: 17px;
+    font-weight: 900;
+    text-align: center;
+    transition: .4s;
+  }
+
+  .learn-more:hover,
+  .load-btn:hover {
+    background-color: var(--font-color);
+    color: var(--secondary-btn-color);
+    box-shadow: 1px 1px 3px #000;
+  }
+
+  .load-btn-block { text-align: center; }
+
+  .load-btn {
+    padding: 24px 63px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    transition: .4s;
+  }
+  /* display styling ends here */
 /*=================================
   main styling ends here
 =================================*/
