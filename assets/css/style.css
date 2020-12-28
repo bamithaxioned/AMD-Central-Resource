@@ -488,3 +488,72 @@ nav { flex-basis: 100%; }
 /*=================================
   main styling ends here
 =================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+footer { padding: 22px 0 35px; }
+
+.footer-top,
+.clients,
+.footer-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.footer-top {
+  padding: 20px 0;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.footer-top-heading { flex-basis: 25.4%; }
+
+.footer-top-heading a,
+.clients a{ 
+  text-indent: -999999px;
+}
+
+.footer-top-heading img,
+.clients img{ 
+  float: right;
+  clear: both;
+  text-indent: 0;
+}
+
+.clients li {
+  width: 63px;
+  margin-left: 28px;
+}
+
+.clients li:nth-last-child(1) { margin-right: 20px; }
+.footer-bottom { justify-content: space-between; }
+.footer-nav li { margin-right: 16px; }
+
+.footer-nav li a {
+  color: #304EB1;
+  font-size: 13px;
+  font-weight: 900;
+  transition: .4s;
+}
+
+.terms-and-condition li a,
+.copyright {
+  color: #4DB8E7;
+  font-size: 12px;
+  font-weight: 600;
+  transition: .4s;
+}
+
+.footer-nav li a:hover,
+.terms-and-condition li a:hover,
+.copyright:hover {
+  color: #000;
+  text-shadow: 2px 2px 2px #4DB8E7;
+}
+
+.terms-and-condition li:nth-child(2) { margin: 0 5px 0 17px; }
+.terms-and-condition li:nth-last-child(1) { margin-right: 5px; }
+ /*=================================
+  footer styling ends here
+=================================*/ 
