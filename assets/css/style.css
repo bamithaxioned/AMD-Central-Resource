@@ -197,3 +197,102 @@ nav { flex-basis: 100%; }
 /*=================================
   Header styling ends here
 =================================*/
+
+/*=================================
+  main styling starts here
+=================================*/
+
+  /* filter styling starts here */
+  .filter { padding: 50px 0; }
+
+  .filter .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .filter-heading {
+    font-size: 34px;
+    font-weight: 900;
+  }
+
+  .filter-icon {
+    position: relative;
+  }
+
+  .filter-icon > a { text-indent: -999999px; }
+
+  .filter-icon > a img {
+    width: 45px;
+    float: right;
+    text-indent: 0;
+    clear: both;
+  }
+
+  .filter-list {
+    width: 190px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 132%;
+    left: -50%;
+    background-color: var(--btn-color);
+    opacity: 0;
+    transition: .5s;
+    transform: translate(-28%, 20px);
+    visibility: hidden;
+  }
+
+  .filter-icon:hover .filter-list{
+    opacity: 1;
+    transform: translate(-28%, 0);
+    visibility: visible;
+  }
+
+  .filter-list::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--btn-color);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-30%) rotate(45deg);
+  }
+
+  .filter-list-heading {
+    margin-bottom: 17px;
+    display: inline-block;
+    color: var(--font-color);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .filter-btn li a {
+    padding: 3px;
+    border: 2px solid transparent;
+    text-indent: -999999px;
+    transition: .3s;
+  }
+
+  .filter-btn li a.active,
+  .filter-btn li a:hover {
+    border-color: var(--font-color);
+  }
+
+  .filter-btn li a img {
+    width: 35px;
+    float: right;
+    clear: both;
+    text-indent: 0px;
+  }
+  /* filter styling ends here */
+/*=================================
+  main styling ends here
+=================================*/
