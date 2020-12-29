@@ -139,15 +139,15 @@ header {
 }
 
 header .wrapper {
-  display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
-  align-items: center;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  justify-content: space-between;
+          align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .main-heading { margin: 0 0 10px 4px; }
@@ -161,7 +161,8 @@ header .wrapper {
 }
 
 nav {
-  flex-basis: 71%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
 }
 
 .navigation { float: right; }
@@ -195,9 +196,9 @@ nav {
   margin: 7px 0;
   display: block;
   background-color: #fff;
-  transition: .5s;
   -webkit-transition: .5s;
   -o-transition: .5s;
+  transition: .5s;
 }
 
 .line3 { width: 40px; }
@@ -205,21 +206,21 @@ nav {
 
 .hamburger.active .line1 {
   width: 40px;
-  transform: translateY(10px) rotate(40deg);
   -webkit-transform: translateY(10px) rotate(40deg);
   -ms-transform: translateY(10px) rotate(40deg);
+          transform: translateY(10px) rotate(40deg);
  }
 
 .hamburger.active .line2 {
-  transform: scale(0);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .hamburger.active .line3 {
-  transform: translateY(-10px) rotate(-40deg);
   -webkit-transform: translateY(-10px) rotate(-40deg);
   -ms-transform: translateY(-10px) rotate(-40deg);
+  transform: translateY(-10px) rotate(-40deg);
 }
 /*=================================
   Header styling ends here
@@ -233,15 +234,15 @@ nav {
   .filter { padding: 50px 0; }
 
   .filter .wrapper {
-    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
-    align-items: center;
+    display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    justify-content: space-between;
+            align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .filter-heading {
@@ -268,20 +269,20 @@ nav {
     left: -50%;
     background-color: var(--btn-color);
     opacity: 0;
-    transition: .5s;
     -webkit-transition: .5s;
     -o-transition: .5s;
-    transform: translate(-28%, 20px);
+    transition: .5s;
     -webkit-transform: translate(-28%, 20px);
     -ms-transform: translate(-28%, 20px);
+            transform: translate(-28%, 20px);
     visibility: hidden;
   }
 
   .filter-icon:hover .filter-list{
     opacity: 1;
-    transform: translate(-28%, 0);
     -webkit-transform: translate(-28%, 0);
     -ms-transform: translate(-28%, 0);
+            transform: translate(-28%, 0);
     visibility: visible;
   }
 
@@ -293,9 +294,9 @@ nav {
     top: -10px;
     left: 50%;
     background-color: var(--btn-color);
-    transform: translateX(-30%) rotate(45deg);
     -webkit-transform: translateX(-30%) rotate(45deg);
     -ms-transform: translateX(-30%) rotate(45deg);
+            transform: translateX(-30%) rotate(45deg);
   }
 
   .filter-list-heading {
@@ -307,24 +308,24 @@ nav {
   }
 
   .filter-btn {
-    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
-    align-items: center;
+    display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    justify-content: space-between;
+            align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .filter-btn li a {
     padding: 3px;
     border: 2px solid transparent;
     text-indent: -999999px;
-    transition: .3s;
     -webkit-transition: .3s;
     -o-transition: .3s;
+    transition: .3s;
   }
 
   .filter-btn li a.active,
@@ -346,12 +347,12 @@ nav {
     background-color: var(--secondary-color);
   }
   .iterate-form {
-    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
-    justify-content: space-between;
+    display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .select {
@@ -383,9 +384,9 @@ nav {
     width: 66px;
     height: 96%;
     border-radius: 10px;
-    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: flex;
     position: absolute;
     top: 0;
     right: 0;
@@ -393,12 +394,12 @@ nav {
     color: #fff;
     font-family: "FontAwesome";
     font-size: 20px;
-    align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    justify-content: center;
+            align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
+            justify-content: center;
     pointer-events: none;
   }
 
@@ -419,29 +420,29 @@ nav {
 
   .display-card {
     margin: 38px 0 43px;
-    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
-    align-items: flex-start;
+    display: flex;
     -webkit-box-align: start;
     -ms-flex-align: start;
-    justify-content: space-between;
+            align-items: flex-start;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    flex-wrap: wrap;
+            justify-content: space-between;
     -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .display-card.two-card li{
-    flex-basis: 48.88%;
     -ms-flex-preferred-size: 48.88%;
+    flex-basis: 48.88%;
   }
 
   .display-card.two-card img{ height: 157px; }
 
   .display-card.four-card li{
-    flex-basis: 23.47%;
     -ms-flex-preferred-size: 23.47%;
+    flex-basis: 23.47%;
   }
   
   .display-card.four-card img { height: 159px; }
@@ -449,8 +450,8 @@ nav {
   .display-card li {
     margin-bottom: 17px;
     border-radius: 10px;
-    flex-basis: 31.7%;
     -ms-flex-preferred-size: 31.7%;
+        flex-basis: 31.7%;
     overflow: hidden;
   }
 
@@ -458,8 +459,8 @@ nav {
   .display-card figure { margin-bottom: -4px;}
 
   .display-card img {
-    object-fit: cover;
     -o-object-fit: cover;
+    object-fit: cover;
   }
 
   .display-content {
@@ -489,17 +490,17 @@ nav {
     font-size: 17px;
     font-weight: 900;
     text-align: center;
-    transition: .4s;
     -webkit-transition: .4s;
     -o-transition: .4s;
+    transition: .4s;
   }
 
   .learn-more:hover,
   .load-btn:hover {
     background-color: var(--font-color);
     color: var(--secondary-btn-color);
-    box-shadow: 1px 1px 3px #000;
     -webkit-box-shadow: 1px 1px 3px #000;
+            box-shadow: 1px 1px 3px #000;
   }
 
   .load-btn-block { text-align: center; }
@@ -510,6 +511,8 @@ nav {
     font-size: 14px;
     font-weight: 900;
     letter-spacing: .5px;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
   }
   /* display styling ends here */
@@ -522,18 +525,18 @@ nav {
 
   .mailing .wrapper,
   .mailing-form {
-    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
-    align-items: center;
+    display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
+            align-items: center;
   }
 
   .mailing .wrapper {
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 
   .mailing-heading {
@@ -570,16 +573,16 @@ nav {
     padding: 17px 45px;
     border: none;
     border-radius: 16px;
-    transition: .4s;
     -webkit-transition: .4s;
     -o-transition: .4s;
+    transition: .4s;
   }
 
   .submit-btn:hover {
     background-color: var(--font-color);
     color: var(--secondary-btn-color);
-    box-shadow: 1px 1px 5px var(--btn-color);
     -webkit-box-shadow: 1px 1px 5px var(--btn-color);
+            box-shadow: 1px 1px 5px var(--btn-color);
   }
   /* mailing styling ends here */
 
@@ -595,25 +598,25 @@ footer { padding: 22px 0 35px; }
 .footer-top,
 .clients,
 .footer-bottom {
-  display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
-  align-items: center;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-top {
   padding: 20px 0;
   margin-bottom: 25px;
-  justify-content: space-between;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer-top-heading {
-  flex-basis: 25.4%;
   -ms-flex-preferred-size: 25.4%;
+  flex-basis: 25.4%;
 }
 
 .footer-top-heading a,
@@ -640,17 +643,17 @@ footer { padding: 22px 0 35px; }
 }
 
 .clients li a:hover {
-  transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .clients li:nth-last-child(1) { margin-right: 20px; }
 
 .footer-bottom {
-  justify-content: space-between;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .footer-nav li { margin-right: 16px; }
@@ -659,9 +662,9 @@ footer { padding: 22px 0 35px; }
   color: #304EB1;
   font-size: 13px;
   font-weight: 900;
-  transition: .4s;
   -webkit-transition: .4s;
   -o-transition: .4s;
+  transition: .4s;
 }
 
 .terms-and-condition li a,
@@ -669,9 +672,9 @@ footer { padding: 22px 0 35px; }
   color: #4DB8E7;
   font-size: 12px;
   font-weight: 600;
-  transition: .4s;
   -webkit-transition: .4s;
   -o-transition: .4s;
+  transition: .4s;
 }
 
 .footer-nav li a:hover,
@@ -704,34 +707,34 @@ footer { padding: 22px 0 35px; }
 .contact-form {
   width: 66.5%;
   margin: 25px 0 49px;
-  display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
-  justify-content: space-between;
+  display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-          align-items: flex-start;
+          justify-content: space-between;
   -webkit-box-align: start;
   -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .input-content {
-  flex-basis: 50.2%;
   -ms-flex-preferred-size: 50.2%;
+  flex-basis: 50.2%;
 }
 
 .text-area {
-  flex-basis: 45.57%;
   -ms-flex-preferred-size: 45.57%;
+  flex-basis: 45.57%;
 }
 
 .input-box {
-  display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
-  align-items: center;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact-name,
@@ -765,19 +768,19 @@ input[type="checkbox"] {
   margin-right: 10px;
   border: 2px solid #283EAA;
   outline: none;
-  display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
-  align-items: center;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+          align-items: center;
   -webkit-appearance: none;
-  appearance: none;
   -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
-  justify-content: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+          justify-content: center;
 }
 
 input[type="checkbox"]::after {
@@ -821,10 +824,10 @@ input[type="checkbox"]:checked::after { display: block; }
 @media only screen and (max-width: 1024px) {
   /* mailing  Section */
   .mailing .wrapper {
-    flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .mailing-heading {
@@ -849,20 +852,20 @@ input[type="checkbox"]:checked::after { display: block; }
     color: var(--font-color);
     background-color: var(--secondary-btn-color);
     -webkit-box-shadow: unset;
-    box-shadow: unset;
+            box-shadow: unset;
   }
 
   .submit-btn:hover {
     background-color: var(--secondary-btn-color);
     color: var(--font-color);
     -webkit-box-shadow: unset;
-    box-shadow: unset;
+            box-shadow: unset;
   }
 
   .clients li a:hover {
-    transform: unset;
     -webkit-transform: unset;
     -ms-transform: unset;
+    transform: unset;
   }
 
   .footer-nav li a:hover,
@@ -886,21 +889,21 @@ input[type="checkbox"]:checked::after { display: block; }
   .filter-heading { font-size: 26px; }
 
   .iterate-form { 
-    flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    align-items: center;
+    flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
+            align-items: center;
   }
 
   .filter-icon { display: none; } 
   .select::before { height: 100%; }
 
   .display-card li{
-    flex-basis: 48.88% !important;
     -ms-flex-preferred-size: 48.88% !important;
+    flex-basis: 48.88% !important;
   }
 
   .display-card figure { margin-bottom: -5px; }
@@ -912,10 +915,10 @@ input[type="checkbox"]:checked::after { display: block; }
 
   /* mailing  Section */
   .mailing .wrapper {
-    flex-direction: column; 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .mailing-heading {
@@ -928,7 +931,7 @@ input[type="checkbox"]:checked::after { display: block; }
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
+            flex-direction: column;
   }
 
   .input-box { width: 70%; }
@@ -945,10 +948,10 @@ input[type="checkbox"]:checked::after { display: block; }
   .footer-bottom {
     padding: 0;
     margin: 10px 0;
-    flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .footer-top-heading { margin-bottom: 20px; }
@@ -965,8 +968,8 @@ input[type="checkbox"]:checked::after { display: block; }
 @media only screen and (max-width: 768px) {
   /* Header Styling */
   nav {
-    flex-basis: auto;
     -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
 
   .navigation {
@@ -980,33 +983,33 @@ input[type="checkbox"]:checked::after { display: block; }
     top: 0;
     right: -51%;
     background-color: var(--primary-color);
-    align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    box-shadow: -5px 0 10px #000;
+            align-items: center;
     -webkit-box-shadow: -5px 0 10px #000;
-    flex-direction: column;
+            box-shadow: -5px 0 10px #000;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    justify-content: space-around;
+            flex-direction: column;
     -ms-flex-pack: distribute;
-    transition: .3s ease-in-out;
+        justify-content: space-around;
     -webkit-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
   }
 
   .hamburger {
     display: block;
-    transition: .4s;
     -webkit-transition: .4s;
     -o-transition: .4s;
+    transition: .4s;
   }
 
   .hamburger.active {
-    transform: translate(90%, -150%);
     -webkit-transform: translate(90%, -150%);
     -ms-transform: translate(90%, -150%);
+    transform: translate(90%, -150%);
   }
 
   .navigation.active { right: 0; }
@@ -1037,9 +1040,9 @@ input[type="checkbox"]:checked::after { display: block; }
   .clients li {
     width: 115px;
     margin: 0 0 20px 0;
-    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: flex;
 }
 
   .footer-top,
@@ -1061,10 +1064,10 @@ input[type="checkbox"]:checked::after { display: block; }
 
   /* CONTACT STYLING */
   .contact-form {
-    flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .contact-heading { margin: 90px 0 30px; }
@@ -1084,8 +1087,8 @@ input[type="checkbox"]:checked::after { display: block; }
   .display .wrapper { width: 100%; }
 
   .display-card li {
-    flex-basis: 100% !important; 
     -ms-flex-preferred-size: 100% !important;
+    flex-basis: 100% !important;
   }
 
   /* Mailing Styling */
@@ -1108,9 +1111,9 @@ input[type="checkbox"]:checked::after { display: block; }
   .main-heading { width: 70%; }
 
   .hamburger.active {
-    transform: translate(50%, -100%);
     -webkit-transform: translate(50%, -100%);
     -ms-transform: translate(50%, -100%);
+    transform: translate(50%, -100%);
   }
 
   /* Iterate Styling */
