@@ -1134,11 +1134,10 @@ input[type="checkbox"]:checked::after { display: block; }
   .footer-nav li a { font-size: 14px; }
 
   .terms-and-condition li a,
-  .copyright {
+  .copyright { 
     font-size: 12px;
   }
-  .contact-para {
-    width: 64%;
-    font-size: 17px;
-  }
+  
+  .contact-para { font-size: 17px; }
+  .mailing-heading { font-size: 16px; }
 }
