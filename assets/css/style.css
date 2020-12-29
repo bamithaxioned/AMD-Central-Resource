@@ -923,3 +923,26 @@ input[type="checkbox"]:checked::after { display: block; }
     font-size: 18px;
   }
 }
+
+/*media query for 520px starts here*/
+@media only screen and (max-width: 520px) {
+  /* Header Styling */
+  header { padding: 30px 0; }
+  .main-heading { width: 70%; }
+
+  .hamburger.active {
+    transform: translate(50%, -100%);
+    -webkit-transform: translate(50%, -100%);
+    -ms-transform: translate(50%, -100%);
+  }
+
+  /* Iterate Styling */
+  .select {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  /* Footer Styling */
+  .footer-nav li a { font-size: 16px; }
+  .clients li { width: 100px; }
+}
