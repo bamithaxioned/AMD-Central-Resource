@@ -664,3 +664,10 @@ input[type="checkbox"]:checked::after { display: block; }
   background-color: #fff;
   color: #000;
 }
+
+/*MEDIA QUERY STARTS HERE*/
+/*media query for 1094px starts here*/
+@media only screen and (max-width: 1094px) {
+  .select { width: 35%; } /* Iterate Section*/
+  #email-us { width: 500px; } /* Mailing Section*/
+}
