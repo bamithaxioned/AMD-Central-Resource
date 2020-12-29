@@ -161,8 +161,7 @@ header .wrapper {
 }
 
 nav {
-  flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
+  flex-basis: 71%;
 }
 
 .navigation { float: right; }
@@ -182,8 +181,8 @@ nav {
 
 /* hamburger Styling */
 .hamburger {
-  position: relative;
   display: none;
+  position: relative;
   z-index: 2;
   cursor: pointer;
   text-indent: -999999px;
