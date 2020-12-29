@@ -444,7 +444,9 @@ nav {
     -ms-flex-preferred-size: 23.47%;
     flex-basis: 23.47%;
   }
-  
+
+  .display-card.four-card .display-content { padding: 30px 23px; }
+  .display-card.four-card  .display-para { margin: 18px 0 40px; }
   .display-card.four-card img { height: 159px; }
 
   .display-card li {
