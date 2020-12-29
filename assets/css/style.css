@@ -370,6 +370,11 @@ nav { flex-basis: 100%; }
     flex-wrap: wrap;
   }
 
+  .display-card.two-card li{ flex-basis: 48.88%; }
+  .display-card.two-card img{ height: 157px; }
+  .display-card.four-card li{ flex-basis: 23.47%; }
+  .display-card.four-card img { height: 159px; }
+
   .display-card li {
     margin-bottom: 17px;
     border-radius: 10px;
