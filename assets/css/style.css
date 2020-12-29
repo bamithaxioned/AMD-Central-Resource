@@ -946,3 +946,19 @@ input[type="checkbox"]:checked::after { display: block; }
   .footer-nav li a { font-size: 16px; }
   .clients li { width: 100px; }
 }
+
+@media only screen and (max-width: 320px) {
+  .select { width: 100%; }
+  select { font-size: 14px; }
+  .clients li { width: 80px; }
+  .footer-nav li a { font-size: 14px; }
+
+  .terms-and-condition li a,
+  .copyright {
+    font-size: 12px;
+  }
+  .contact-para {
+    width: 64%;
+    font-size: 17px;
+  }
+}
