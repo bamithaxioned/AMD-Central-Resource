@@ -697,6 +697,7 @@ input[type="checkbox"]:checked::after { display: block; }
 
   /* Removing all Hover Effects */
   .navigation li a:hover { color: white; }
+  .filter-btn li a:hover { border-color: transparent; }
 
   .learn-more:hover,
   .load-btn:hover {
@@ -712,7 +713,7 @@ input[type="checkbox"]:checked::after { display: block; }
     -webkit-box-shadow: unset;
     box-shadow: unset;
   }
-  
+
   .clients li a:hover {
     transform: unset;
     -webkit-transform: unset;
