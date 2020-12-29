@@ -293,12 +293,12 @@ nav { flex-basis: 100%; }
     width: 35px;
     float: right;
     clear: both;
-    text-indent: 0px;
+    text-indent: 0;
   }
   /* filter styling ends here */
   /* iterate styling starts here */
   .iterate {
-    padding: 34px 0px 25px;
+    padding: 34px 0 25px;
     background-color: var(--secondary-color);
   }
   .iterate-form {
