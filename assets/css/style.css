@@ -532,6 +532,9 @@ footer { padding: 22px 0 35px; }
   margin-left: 28px;
 }
 
+.clients a { transition: .5s; }
+.clients li a:hover { transform: scale(1.2); }
+
 .clients li:nth-last-child(1) { margin-right: 20px; }
 .footer-bottom { justify-content: space-between; }
 .footer-nav li { margin-right: 16px; }
