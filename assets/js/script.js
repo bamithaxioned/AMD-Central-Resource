@@ -62,22 +62,33 @@ xhr.onload = function () {
 };
 xhr.send();
 // ============================================== CODE FOR DISPLAYING CARD(AJAX) ENDS HERE
-// ============================================== Filter Btn STARTS HERE
+// ============================================== FILTER BUTTON STARTS HERE
 let filterBtn = document.querySelectorAll(".filter-btn li a");
 let filterList = document.querySelectorAll(".filter-btn li");
 let displayCard = document.querySelector(".display-card");
+let filterImage = document.querySelector(".filter-icon a img");
 
 filterBtn.forEach(function (btn, index) {
   btn.addEventListener("click", function (e) {
+    // REMOVING CLASS ACTIVE FROM ALL FILTER lINKS
+    for (let i = 0; i < filterBtn.length; i++) filterBtn[i].classList.remove("active");
+
     if (e.currentTarget.classList.contains("two-column")) {
       displayCard.classList = "display-card two-card";
+      e.currentTarget.classList.add("active")
+      filterImage.src = "assets/images/2-column.png";
     } else if (e.currentTarget.classList.contains("three-column")) {
       displayCard.classList = "display-card three-card";
+      e.currentTarget.classList.add("active")
+      filterImage.src = "assets/images/3-column.png";
     } else if (e.currentTarget.classList.contains("four-column")) {
       displayCard.classList = "display-card four-card";
+      filterImage.src = "assets/images/4-column.png";
+      e.currentTarget.classList.add("active");
     } else {
       displayCard.classList = "display-card";
+      filterImage.src = "assets/images/3-column.png";
     }
   });
 });
-// ============================================== Filter Btn ENDS HERE
+// ============================================== FILTER BUTTON ENDS HERE
