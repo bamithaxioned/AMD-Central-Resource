@@ -62,3 +62,22 @@ xhr.onload = function () {
 };
 xhr.send();
 // ============================================== CODE FOR DISPLAYING CARD(AJAX) ENDS HERE
+// ============================================== Filter Btn STARTS HERE
+let filterBtn = document.querySelectorAll(".filter-btn li a");
+let filterList = document.querySelectorAll(".filter-btn li");
+let displayCard = document.querySelector(".display-card");
+
+filterBtn.forEach(function (btn, index) {
+  btn.addEventListener("click", function (e) {
+    if (e.currentTarget.classList.contains("two-column")) {
+      displayCard.classList = "display-card two-card";
+    } else if (e.currentTarget.classList.contains("three-column")) {
+      displayCard.classList = "display-card three-card";
+    } else if (e.currentTarget.classList.contains("four-column")) {
+      displayCard.classList = "display-card four-card";
+    } else {
+      displayCard.classList = "display-card";
+    }
+  });
+});
+// ============================================== Filter Btn ENDS HERE
