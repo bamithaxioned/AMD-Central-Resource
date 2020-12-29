@@ -557,3 +557,101 @@ footer { padding: 22px 0 35px; }
  /*=================================
   footer styling ends here
 =================================*/ 
+
+/* STYLING FOR CONTACT.HTML */
+.contact-heading {
+  margin: 54px 0 53px;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.contact-para {
+  width: 64%;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: .5px;
+}
+
+.contact-form {
+  width: 66.5%;
+  margin: 25px 0 49px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.input-content { flex-basis: 50.2%; }
+.text-area { flex-basis: 45.57%; }
+
+.input-box {
+  display: flex;
+  align-items: center;
+}
+
+.contact-name,
+.contact-company,
+.contact-email,
+.message {
+  width: 100%;
+  padding: 13px 10px;
+  border: 2px solid #283EAA;
+  margin-bottom: 14px;
+  color: #283EAA;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  outline: none;
+  resize: none;
+}
+
+.message { height: 166px; }
+
+.contact-name::placeholder,
+.contact-company::placeholder,
+.contact-email::placeholder,
+.message::placeholder {
+  color: #283EAA;
+}
+
+input[type="checkbox"] {
+  width: 22px;
+  height: 21px;
+  margin-right: 10px;
+  border: 2px solid #283EAA;
+  outline: none;
+  display: flex;
+  align-items: center;
+  appearance: none;
+  cursor: pointer;
+  justify-content: center;
+}
+
+input[type="checkbox"]::after {
+  content: "\f00c";
+  display: none;
+  color: #283EAA;
+  font-family: "FontAwesome";
+}
+
+input[type="checkbox"]:checked::after { display: block; }
+
+.input-box label {
+  color: #283EAA;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .5px;
+  text-transform: lowercase;
+}
+
+.text-area .submit-btn {
+  padding: 15px 50px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+}
+
+.text-area .submit-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
