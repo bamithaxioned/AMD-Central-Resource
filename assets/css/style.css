@@ -671,3 +671,27 @@ input[type="checkbox"]:checked::after { display: block; }
   .select { width: 35%; } /* Iterate Section*/
   #email-us { width: 500px; } /* Mailing Section*/
 }
+
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+  /* mailing  Section */
+  .mailing .wrapper {
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+  }
+
+  .mailing-heading {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  /* CONTACT PAGE */
+  .contact-para,
+  .contact-form {
+    width: 100%;
+  }
+
+  .input-content .input-box { width: 100%; }  
+}
