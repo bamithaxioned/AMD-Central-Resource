@@ -172,6 +172,7 @@ nav { flex-basis: 100%; }
 
 /* hamburger Styling */
 .hamburger {
+  position: relative;
   display: none;
   z-index: 2;
   cursor: pointer;
