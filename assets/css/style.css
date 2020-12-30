@@ -871,6 +871,11 @@ input[type="checkbox"]:checked::after { display: block; }
             box-shadow: unset;
   }
 
+  .text-area .submit-btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
   .clients li a:hover {
     -webkit-transform: unset;
     -ms-transform: unset;
