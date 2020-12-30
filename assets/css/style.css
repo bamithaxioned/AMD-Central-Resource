@@ -888,6 +888,10 @@ input[type="checkbox"]:checked::after { display: block; }
     color: #304EB1;
     text-shadow: unset;
   }
+  .terms-and-condition li a:hover,
+  .copyright:hover {
+    color: #4DB8E7;
+  }
 }
 
 /*media query for 995px starts here*/
