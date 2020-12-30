@@ -559,7 +559,8 @@ nav {
     font-size: 16px;
   }
   
-  .error {
+  .error,
+  .contact-error  {
     position: absolute;
     bottom: -17px;
     left: 0;
@@ -568,6 +569,10 @@ nav {
     letter-spacing: .5px;
   }
 
+  .contact-error {
+    bottom: 0;
+    font-size: 9px;
+  }
   .submit-btn {
     font-weight: 900;
     font-size: 16px;
