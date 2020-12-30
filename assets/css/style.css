@@ -953,6 +953,8 @@ input[type="checkbox"]:checked::after { display: block; }
     margin-bottom: 20px;
   }
 
+  .text-area .input-box { width: 100%; }
+  
   #email-us {
     width: 100%;
     margin: 0;
