@@ -92,3 +92,45 @@ filterBtn.forEach(function (btn, index) {
   });
 });
 // ============================================== FILTER BUTTON ENDS HERE
+// ============================================== EMAIL VALIDATION OF MAILING SECTION STARTS HERE
+let submitBtn = document.querySelector(".mailing .submit-btn");
+
+// FUNCTION TO VALIDATE EMAIL
+function validateEmail(input, emailVal) {
+  let emailRegex = /^([_\.\-a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,5}$/;
+  let inputBox = input.parentElement;
+
+  let createdSpan = document.createElement("span");
+  createdSpan.setAttribute("class", "error");
+  let span = inputBox.querySelector(".error");
+
+  //CODE TO DISPLAY ONLY SINGLE SPAN ON CLICK
+  if (!inputBox.contains(span)) inputBox.appendChild(createdSpan);
+  span = inputBox.querySelector("span");
+
+  if (emailVal === "") {
+    span.style.display = "block";
+    span.style.color = "#e74c3c";
+    span.textContent = "Email Cannot Be Empty";
+  }
+  else if (emailRegex.test(emailVal)) {
+    span.textContent = "Thank You for Signing Up."
+    span.style.display = "block";
+    span.style.color = "#2ecc71";
+    input.value = "";
+    setTimeout(() => span.style.display = "none", 2000);
+  } else {
+    span.style.display = "block";
+    span.style.color = "#e74c3c";
+    span.textContent = "Please Enter Valid Email. Eg. abc@xyz.com";
+  }
+};
+
+//ADDING EVENT LISTENER ON SUBMIT BUTTON 
+submitBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  let input = document.getElementById("email-us");
+  let emailVal = input.value.trim();
+  validateEmail(input, emailVal);
+});
+// ============================================== EMAIL VALIDATION OF MAILING SECTION ENDS HERE
