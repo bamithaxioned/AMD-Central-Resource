@@ -563,7 +563,6 @@ nav {
     position: absolute;
     bottom: -17px;
     left: 0;
-    color: red;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: .5px;
@@ -574,6 +573,7 @@ nav {
     font-size: 16px;
     padding: 17px 45px;
     border: none;
+    outline: none;
     border-radius: 16px;
     -webkit-transition: .4s;
     -o-transition: .4s;
@@ -936,11 +936,14 @@ input[type="checkbox"]:checked::after { display: block; }
             flex-direction: column;
   }
 
-  .input-box { width: 70%; }
+  .input-box {
+    width: 70%;
+    margin-bottom: 20px;
+  }
 
   #email-us {
     width: 100%;
-    margin: 0 0 18px;
+    margin: 0;
   }
 
   /* Footer Section */
