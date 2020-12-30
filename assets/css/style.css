@@ -559,7 +559,8 @@ nav {
     font-size: 16px;
   }
   
-  .error {
+  .error,
+  .contact-error  {
     position: absolute;
     bottom: -17px;
     left: 0;
@@ -568,6 +569,10 @@ nav {
     letter-spacing: .5px;
   }
 
+  .contact-error {
+    bottom: 0;
+    font-size: 9px;
+  }
   .submit-btn {
     font-weight: 900;
     font-size: 16px;
@@ -739,6 +744,8 @@ footer { padding: 22px 0 35px; }
           align-items: center;
 }
 
+.input-content .input-box:nth-last-child(1) { padding-bottom: 13px; }
+
 .contact-name,
 .contact-company,
 .contact-email,
@@ -864,6 +871,11 @@ input[type="checkbox"]:checked::after { display: block; }
             box-shadow: unset;
   }
 
+  .text-area .submit-btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
   .clients li a:hover {
     -webkit-transform: unset;
     -ms-transform: unset;
@@ -940,6 +952,8 @@ input[type="checkbox"]:checked::after { display: block; }
     width: 70%;
     margin-bottom: 20px;
   }
+
+  .text-area .input-box { width: 100%; }
 
   #email-us {
     width: 100%;
@@ -1082,7 +1096,7 @@ input[type="checkbox"]:checked::after { display: block; }
     width: 100%;
   }
 
-  .text-area { margin-top: 20px; }
+  .text-area { margin-top: 0; }
   .text-area .submit-btn { width: 100%; }
 }
 
