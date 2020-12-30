@@ -1,3 +1,9 @@
+// REGULAR EXPRESSIONS
+let nameRegex = /^([a-zA-Z])([a-zA-z\s\.]){1,29}$/
+let companyRegex = /^([a-zA-Z])([a-zA-Z0-9\s\.]){3,39}$/;
+let emailRegex = /^([_\.\-a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,5}$/;
+let textareaRegex = /^([a-zA-Z])([a-zA-Z0-9\s\.\-\*_@=?.,+&$%!#()/\\"']){1,149}$/;
+
 // GRABBONG ELEMENTS
 let main = document.querySelector("main");
 
@@ -66,7 +72,7 @@ function displayCards() {
   xhr.send();
 }
 
-if(main.classList.contains("index")) displayCards();
+if (main.classList.contains("index")) displayCards();
 // ============================================== CODE FOR DISPLAYING CARD(AJAX) ENDS HERE
 // ============================================== FILTER BUTTON STARTS HERE
 let filterBtn = document.querySelectorAll(".filter-btn li a");
@@ -103,7 +109,6 @@ let submitBtn = document.querySelector(".mailing .submit-btn");
 
 // FUNCTION TO VALIDATE EMAIL
 function validateEmail(input, emailVal) {
-  let emailRegex = /^([_\.\-a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,5}$/;
   let inputBox = input.parentElement;
 
   let createdSpan = document.createElement("span");
@@ -140,3 +145,89 @@ submitBtn.addEventListener("click", function (e) {
   validateEmail(input, emailVal);
 });
 // ============================================== EMAIL VALIDATION OF MAILING SECTION ENDS HERE
+// ============================================== CONTACT FORM STARTS HERE
+// GRABBING ELEMENTS
+let contactSubmitBtn = document.querySelector(".text-area .submit-btn");
+
+if (main.classList.contains("contact")) {
+  contactSubmitBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let contactName = document.querySelector(".contact-name");
+    let contactCompany = document.querySelector(".contact-company");
+    let checkbox = document.querySelector("#check");
+    let message = document.querySelector(".message");
+    let contactEmail = document.querySelector(".contact-email");
+
+    // VALIDATING NAME
+    let nameError = "Name should be between 2 to 30 character";
+    validation(contactName, nameError, nameRegex);
+
+    // VALIDATING COMPANY NAME
+    let contactError = "Name should be between 2 to 40 character";
+    validation(contactCompany, contactError, companyRegex);
+
+    // VALIDATING EMAIL
+    let emailError = "Please Enter Valid Email. Eg. abc@xyz.com";
+    validation(contactEmail, emailError, emailRegex);
+
+    // VALIDATING CHECKBOX
+    validateCheckBox(checkbox);
+
+    // VALIDATING TEXTAREA
+    let textareaError = "Message should be between 4 to 150 character";
+    validation(message, textareaError, textareaRegex);
+
+    // CONDITION TO MAKE ALL INPUT EMPTY
+    if (nameRegex.test(contactName.value) && companyRegex.test(contactCompany.value) && emailRegex.test(contactEmail.value) && textareaRegex.test(message.value) && checkbox.checked) {
+      contactName.value = "";
+      contactCompany.value = "";
+      checkbox.click();
+      message.value = "";
+      contactEmail.value = "";
+    }
+  });
+}
+// FUNCTION FOR VALIDATING INPUT AND TEXTAREAS IN CONTACT FORM
+function validation(name, errorMsg, regex) {
+  let nameInput = name.parentElement;
+  nameValue = name.value.trim();
+
+  let createdSpan = document.createElement("span");
+  createdSpan.setAttribute("class", "contact-error");
+  let span = nameInput.querySelector(".contact-error");
+
+  //CODE TO DISPLAY ONLY SINGLE SPAN ON CLICK
+  if (!nameInput.contains(span)) nameInput.appendChild(createdSpan);
+  span = nameInput.querySelector("span");
+
+  if (nameValue === "") {
+    span.style.display = "block";
+    span.style.color = "#e74c3c";
+    span.textContent = "Above Field Cannot be Empty";
+  }
+  else if (regex.test(nameValue)) span.style.display = "none";
+  else {
+    span.style.display = "block";
+    span.style.color = "#e74c3c";
+    span.textContent = errorMsg;
+  }
+};
+// VALIDATING CHECKBOX
+function validateCheckBox(checkbox) {
+  let nameInput = checkbox.parentElement;
+
+  let createdSpan = document.createElement("span");
+  createdSpan.setAttribute("class", "contact-error");
+  let span = nameInput.querySelector(".contact-error");
+
+  if (!nameInput.contains(span)) nameInput.appendChild(createdSpan);
+  span = nameInput.querySelector(".contact-error");
+
+  if (!checkbox.checked) {
+    span.style.display = "block";
+    span.style.color = "#e74c3c";
+    span.textContent = "Oops Checkbox is Unchecked";
+  } else span.style.display = "none";
+};
+  // ============================================== CONTACT FORM ENDS HERE
