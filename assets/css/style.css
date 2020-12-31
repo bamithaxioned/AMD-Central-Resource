@@ -1189,6 +1189,9 @@ input[type="checkbox"]:checked::after { display: block; }
   .copyright { 
     font-size: 12px;
   }
+
+  #email-us { font-size: 12px; }
+  .contact-error { font-size: 8px; }
   
   .contact-para { font-size: 17px; }
   .mailing-heading { font-size: 16px; }
