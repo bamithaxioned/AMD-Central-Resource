@@ -173,9 +173,15 @@ nav {
   font-weight: 900;
   font-size: 17px;
   letter-spacing: .6px;
+  transition: .4s;
 }
 
-.navigation li a:hover {color: var(--btn-color); }
+.navigation li a:hover,
+.navigation li a.active {
+  color: var(--btn-color);
+  text-shadow: 2px 2px 3px #000;
+}
+
 .search { margin: 0 5px 0 36px; }
 #search { display: none; }
 .search a img { width: 28px; }
