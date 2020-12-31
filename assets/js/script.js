@@ -22,10 +22,11 @@ function displayCards() {
   // GRABBING ELEMENTS
   let loadBtn = document.querySelector(".load-btn");
   let ul = document.querySelector(".display-card");
+  let url = "assets/js/dummy.json";
   // AJAX STARTS HERE
   let xhr = new XMLHttpRequest();
 
-  xhr.open("GET", 'assets/js/dummy.json', true);
+  xhr.open("GET", url, true);
 
   xhr.onload = function () {
     if (this.status === 200) {
