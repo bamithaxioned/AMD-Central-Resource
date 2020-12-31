@@ -692,7 +692,8 @@ footer { padding: 22px 0 35px; }
 
 .footer-nav li a:hover,
 .terms-and-condition li a:hover,
-.copyright:hover {
+.copyright:hover,
+.footer-nav-list a.active {
   color: #000;
   text-shadow: 2px 2px 2px #4DB8E7;
 }
