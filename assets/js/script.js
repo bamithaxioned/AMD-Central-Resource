@@ -191,7 +191,7 @@ if (main.classList.contains("contact")) {
 // FUNCTION FOR VALIDATING INPUT AND TEXTAREAS IN CONTACT FORM
 function validation(name, errorMsg, regex) {
   let nameInput = name.parentElement;
-  nameValue = name.value.trim();
+  let nameValue = name.value.trim();
 
   let createdSpan = document.createElement("span");
   createdSpan.setAttribute("class", "contact-error");
