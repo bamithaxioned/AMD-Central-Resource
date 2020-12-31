@@ -860,8 +860,18 @@ input[type="checkbox"]:checked::after { display: block; }
   .input-content .input-box { width: 100%; }
 
   /* Removing all Hover Effects */
-  .navigation li a:hover { color: white; }
+  .navigation li a:hover {
+    color: white;
+    -webkit-text-shadow: unset;
+          text-shadow: unset;
+  }
+
   .filter-btn li a:hover { border-color: transparent; }
+
+  .navigation li a.active {
+    color: var(--btn-color);
+    text-shadow: 2px 2px 3px #000;
+  }
 
   .learn-more:hover,
   .load-btn:hover {
@@ -895,6 +905,12 @@ input[type="checkbox"]:checked::after { display: block; }
     color: #304EB1;
     text-shadow: unset;
   }
+
+  .footer-nav li a.active {
+    color: #000;
+    text-shadow: 2px 2px 2px #4DB8E7;
+  }
+  
   .terms-and-condition li a:hover,
   .copyright:hover {
     color: #4DB8E7;
