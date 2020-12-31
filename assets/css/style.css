@@ -173,9 +173,15 @@ nav {
   font-weight: 900;
   font-size: 17px;
   letter-spacing: .6px;
+  transition: .4s;
 }
 
-.navigation li a:hover {color: var(--btn-color); }
+.navigation li a:hover,
+.navigation li a.active {
+  color: var(--btn-color);
+  text-shadow: 2px 2px 3px #000;
+}
+
 .search { margin: 0 5px 0 36px; }
 #search { display: none; }
 .search a img { width: 28px; }
@@ -686,7 +692,8 @@ footer { padding: 22px 0 35px; }
 
 .footer-nav li a:hover,
 .terms-and-condition li a:hover,
-.copyright:hover {
+.copyright:hover,
+.footer-nav-list a.active {
   color: #000;
   text-shadow: 2px 2px 2px #4DB8E7;
 }
@@ -853,8 +860,18 @@ input[type="checkbox"]:checked::after { display: block; }
   .input-content .input-box { width: 100%; }
 
   /* Removing all Hover Effects */
-  .navigation li a:hover { color: white; }
+  .navigation li a:hover {
+    color: white;
+    -webkit-text-shadow: unset;
+          text-shadow: unset;
+  }
+
   .filter-btn li a:hover { border-color: transparent; }
+
+  .navigation li a.active {
+    color: var(--btn-color);
+    text-shadow: 2px 2px 3px #000;
+  }
 
   .learn-more:hover,
   .load-btn:hover {
@@ -888,6 +905,12 @@ input[type="checkbox"]:checked::after { display: block; }
     color: #304EB1;
     text-shadow: unset;
   }
+
+  .footer-nav li a.active {
+    color: #000;
+    text-shadow: 2px 2px 2px #4DB8E7;
+  }
+  
   .terms-and-condition li a:hover,
   .copyright:hover {
     color: #4DB8E7;
@@ -1145,6 +1168,12 @@ input[type="checkbox"]:checked::after { display: block; }
     font-size: 16px;
   }
 
+    /* Mailing Section */
+    .error {
+      bottom: -14px;
+      font-size: 8px;
+  }  
+
   /* Footer Styling */
   .footer-nav li a { font-size: 16px; }
   .clients li { width: 100px; }
@@ -1160,6 +1189,9 @@ input[type="checkbox"]:checked::after { display: block; }
   .copyright { 
     font-size: 12px;
   }
+
+  #email-us { font-size: 12px; }
+  .contact-error { font-size: 8px; }
   
   .contact-para { font-size: 17px; }
   .mailing-heading { font-size: 16px; }
