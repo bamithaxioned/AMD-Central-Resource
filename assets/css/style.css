@@ -1168,6 +1168,12 @@ input[type="checkbox"]:checked::after { display: block; }
     font-size: 16px;
   }
 
+    /* Mailing Section */
+    .error {
+      bottom: -14px;
+      font-size: 8px;
+  }  
+
   /* Footer Styling */
   .footer-nav li a { font-size: 16px; }
   .clients li { width: 100px; }
